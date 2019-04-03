@@ -22,7 +22,7 @@ using namespace std;
     
 /*reading input*/
        
-int  n,c,value;
+int  n,c,val;
     int number;
 	in>>number;
 
@@ -33,14 +33,14 @@ int  n,c,value;
 		  in>>coins[j];
 	       }
             
-          in>>value;
+          in>>val;
      
-        int amount[value+1];
-        int index[value+1];
+        int amount[val+1];
+        int index[val+1];
 
 /*intializing the amount and index arrays*/
        
-        for(int i=0;i<=value;i++)
+        for(int i=0;i<=val;i++)
         {
             amount[i] = INT16_MAX;
             index[i] = -1;
@@ -50,7 +50,7 @@ int  n,c,value;
         
         for(int j=0;j<number;j++)
         {
-            for(int i=1;i<=value;i++)
+            for(int i=1;i<=val;i++)
             {
                 if(i>=coins[j])
                     if(amount[i-coins[j]]+1<amount[i])
